@@ -5,7 +5,7 @@ OS = os.popen("lsb_release -ds").read()
 
 
 result = match(r'Ubuntu', OS.strip())
-print(result)
+print(result.group(0))
 
 
 #if result == "Ubuntu":
