@@ -1,5 +1,5 @@
 import os
-OS = os.popen("lsb_release -ds").read())
+OS = os.popen("lsb_release -ds").read()
 print(OS)
 #print(type(OS))
 
