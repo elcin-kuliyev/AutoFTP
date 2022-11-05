@@ -5,6 +5,6 @@ OS = os.popen("lsb_release -ds").read()
 
 if OS.strip() in "Ubuntu 22.04.1 LTS\\n":
 	print("Ubuntu")
-	os.popen("sudo apt-get update && sudo apt-get upgrade -y").read()
+	os.popen("sudo apt-get update").read()
 else:
 	print("Error")
