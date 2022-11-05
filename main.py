@@ -12,6 +12,8 @@ for result.group(0) in ["Ubuntu", "Debian", "Linux Mint", "Kali Linux", "Parrot 
 	# install update and upgrade system
 	check_call("sudo apt-get update ", shell=True)
 	check_call("sudo apt-get upgrade -y ", shell=True)
-
+for result.group(0) in ["CentOS", "Rocky Linux", "AlmaLinux", "Fedora Linux"]:
+	# install update and upgrade system
+	check_call("sudo yum update -y", shell=True)
 
 
