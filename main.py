@@ -4,7 +4,7 @@ from re import match
 OS = os.popen("lsb_release -ds").read()
 
 
-result = match(r'Ubuntu', OS)
+result = match(r'Ubuntu', OS.strip())
 
 
 if result == "Ubuntu":
