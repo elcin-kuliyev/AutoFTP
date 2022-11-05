@@ -5,7 +5,7 @@ import re
 #print(OS)
 #print(type(OS))
 match = re.match(r'Ubuntu', OS)
-
+print(match)
 if OS.strip() in match:
 	print("""
  .----------------.  .----------------.  .----------------.  .-----------------. .----------------.  .----------------. 
