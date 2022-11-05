@@ -1,3 +1,4 @@
 import os
-print(os.system("lsb_release -ds"))
-print(type(os.system("lsb_release -ds")))
+OS = os.system("lsb_release -ds").read())
+print(OS)
+print(type(OS))
