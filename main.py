@@ -2,9 +2,11 @@ import os
 from subprocess import check_call
 OS = os.popen("lsb_release -ds").read()
 import re
+#print(OS)
+#print(type(OS))
+match = re.match(r'Ubuntu', OS)
 
-
-if re.match(r'Ubuntu', OS) in OS.strip():
+if OS.strip() in match:
 	print("""
  .----------------.  .----------------.  .----------------.  .-----------------. .----------------.  .----------------. 
 | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
