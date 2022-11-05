@@ -1,10 +1,10 @@
 import os
-import subprocess
+from subprocess import check_call
 OS = os.popen("lsb_release -ds").read()
 #print(OS)
 #print(type(OS))
 
-if OS.strip() in "Ubuntu 22.04.1 LTS\\n":
+if OS.strip() in ["Ubuntu 22.04.1 LTS"]:
 	print("""
  .----------------.  .----------------.  .----------------.  .-----------------. .----------------.  .----------------. 
 | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
@@ -18,8 +18,8 @@ if OS.strip() in "Ubuntu 22.04.1 LTS\\n":
 | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
  """)
-	subprocess.check_call("sudo apt-get update ", shell=True)
-	subprocess.check_call("sudo apt-get upgrade -y ", shell=True)
+	check_call("sudo apt-get update ", shell=True)
+	check_call("sudo apt-get upgrade -y ", shell=True)
 
 else:
 	print("Error")
